@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>habits.email - the world's easiest habit tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the world's easiest habit tracker</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
   </head>
 
   <body>
-    <div id="container">
-      <h1>habits.email</h1>
-      <%= yield %>
+    <div id="page-container">
+      <div class="content">
+        <h1>The Name of This Thing</h1>
+        <%= yield %>
+      </div>
     </div>
   </body>
 </html>

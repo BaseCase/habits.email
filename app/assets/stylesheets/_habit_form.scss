@@ -1,15 +1,17 @@
 #new-habit-form {
   background: $color-near-background;
-  border: 1px solid $color-deemphasize;
+  border: 1px solid $color-grid-border;
   border-radius: 3px;
   padding: 2rem;
-  width: 30rem;
+  max-width: 40rem;
+  @media (max-width: $phone-size) { width: 100%; }
 
   h2 {
     margin-top: 0;
   }
 
   legend {
+    color: $color-deemphasize;
     margin-bottom: 1.5rem;
   }
 
@@ -19,11 +21,13 @@
     margin-bottom: 1rem;
 
     label {
-      width: 8rem;
+      font-weight: bold;
+      width: 7rem;
     }
 
     input {
       flex-grow: 1;
+      font-size: 100%;
     }
   }
 }
