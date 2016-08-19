@@ -1,0 +1,27 @@
+#new-habit-form {
+  border: 1px solid #ddd;
+  padding: 2rem;
+  width: 30rem;
+
+  h2 {
+    margin-top: 0;
+  }
+
+  legend {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 1rem;
+
+    label {
+      width: 8rem;
+    }
+
+    input {
+      flex-grow: 1;
+    }
+  }
+}
