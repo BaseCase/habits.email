@@ -2,27 +2,14 @@ html * {
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background: $color-far-background;
   color: $color-foreground;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 1.5em;
 }
 
 h1, h2 {
   color: $color-highlight;
 }
 
-h1 {
-  font-size: 3rem;
-  font-weight: bold;
-  line-height: 1em;
-}
-
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  line-height: 1em;
+#container {
 }
