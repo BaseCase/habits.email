@@ -42,6 +42,7 @@
       flex-grow: 1;
       padding: 1rem;
       transition: background-color 0.3s;
+      -webkit-appearance: none;
 
       &:hover {
         background: $color-hover;
@@ -49,6 +50,7 @@
 
       &:active {
         background: darken($color-hover, 20%);
+        color: black;
         transition: background-color 0;
       }
     }
