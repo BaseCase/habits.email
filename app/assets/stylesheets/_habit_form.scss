@@ -4,7 +4,7 @@
   border-radius: 3px;
   padding: 2rem;
   max-width: 40rem;
-  @media (max-width: $phone-size) { width: 100%; }
+  @media (max-device-width: $phone-size) { width: 100%; }
 
   h2 {
     margin-top: 0;
@@ -12,13 +12,13 @@
 
   legend {
     color: $color-deemphasize;
-    margin-bottom: 1.5rem;
   }
 
   .form-row {
+    align-items: center;
     display: flex;
     flex-direction: row;
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 
     label {
       font-weight: bold;
@@ -26,8 +26,31 @@
     }
 
     input {
+      border-radius: 3px;
+      border: 1px solid #ddd;
       flex-grow: 1;
-      font-size: 100%;
+      font-size: inherit;
+      font-weight: inherit;
+      padding: 0.5rem;
+    }
+
+    input[type=submit] {
+      background: #eee;
+      border-radius: 3px;
+      border: 1px solid #ddd;
+      box-sizing: content-box;
+      flex-grow: 1;
+      padding: 1rem;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background: $color-hover;
+      }
+
+      &:active {
+        background: darken($color-hover, 20%);
+        transition: background-color 0;
+      }
     }
   }
 }
