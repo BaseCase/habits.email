@@ -1,0 +1,24 @@
+class HabitsController < ApplicationController
+  def new
+    @habit = Habit.new
+  end
+
+  def create
+    habit = Habit.new(habit_params)
+    if habit.save
+      redirect_to habit
+    else
+      render "new"
+    end
+  end
+
+  def show
+    @habit = Habit.find(params[:id])
+  end
+
+  private
+
+  def habit_params
+    params.require(:habit).permit(:habit_name, :user_name, :email)
+  end
+end
