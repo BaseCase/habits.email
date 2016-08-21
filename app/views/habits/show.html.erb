@@ -1,9 +1,13 @@
-Congrats, <%= @habit.user_name %>, you made a habit!
+<% if @habit.confirmed %>
+  here's where we'd see the tracking calendar for <%= @habit.habit_name %>
+<% else %>
+  Congrats, <%= @habit.user_name %>, you made a habit!
 
-<br/>
+  <br/>
 
-We sent an email to <%= habit.email %> for confirmation. Once you click the link in that email, we can start tracking the habit for you.
+  We sent an email to <%= @habit.email %> for confirmation. Once you click the link in that email, we can start tracking the habit for you.
 
-<br/>
+  <br/>
 
-Good luck with <%= @habit.habit_name %>!
+  Good luck with <%= @habit.habit_name %>!
+<% end %>

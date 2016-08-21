@@ -10,19 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160821021234) do
+ActiveRecord::Schema.define(version: 20160821223344) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
   enable_extension "uuid-ossp"
 
   create_table "habits", id: :uuid, default: -> { "uuid_generate_v4()" }, force: :cascade do |t|
-    t.string   "habit_name",                 null: false
-    t.string   "user_name",                  null: false
-    t.string   "email",                      null: false
-    t.boolean  "active",     default: false, null: false
-    t.datetime "created_at",                 null: false
-    t.datetime "updated_at",                 null: false
+    t.string   "habit_name",                         null: false
+    t.string   "user_name",                          null: false
+    t.string   "email",                              null: false
+    t.boolean  "active",             default: false, null: false
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+    t.string   "confirmation_token"
+    t.boolean  "confirmed",          default: false
     t.index ["active"], name: "index_habits_on_active", using: :btree
     t.index ["email"], name: "index_habits_on_email", using: :btree
   end
