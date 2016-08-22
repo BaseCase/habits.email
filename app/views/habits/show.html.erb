@@ -1,13 +1,5 @@
 <% if @habit.confirmed %>
-  here's where we'd see the tracking calendar for <%= @habit.habit_name %>
+  <%= render partial: "tracking_calendar" %>
 <% else %>
-  Congrats, <%= @habit.user_name %>, you made a habit!
-
-  <br/>
-
-  We sent an email to <%= @habit.email %> for confirmation. Once you click the link in that email, we can start tracking the habit for you.
-
-  <br/>
-
-  Good luck with <%= @habit.habit_name %>!
+  <%= render partial: "just_created" %>
 <% end %>
