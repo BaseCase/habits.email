@@ -18,10 +18,58 @@ h1, h2 {
 
 #page-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   min-width: 19rem;
+  min-height: 100vh;
   width: 100%;
+
+  footer {
+    align-items: center;
+    background: #444;
+    border-top: 1px solid #ccc;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8rem;
+    height: 3rem;
+    justify-content: space-between;
+    margin-top: auto;
+    width: 100%;
+
+    .created-by {
+      margin-left: 2rem;
+    }
+
+    .contact {
+      margin-right: 2rem;
+
+      span {
+        margin-left: 1rem;
+        position: relative;
+        bottom: -0.2rem;
+      }
+
+      .twitter svg {
+        transition: 0.5s;
+        fill: #fff;
+
+        &:hover {
+          fill: $color-twitter-blue;
+        }
+      }
+
+      .email-me svg {
+        transition: 0.5s;
+        fill: #fff;
+
+        &:hover {
+          fill: lighten($color-gmail-red, 20%);
+        }
+      }
+    }
+  }
 
   .content {
     width: 70%;

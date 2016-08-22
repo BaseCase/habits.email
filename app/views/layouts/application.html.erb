@@ -13,6 +13,30 @@
         <h1>Blep!</h1>
         <%= yield %>
       </div>
+
+      <footer>
+        <div class="created-by">
+          &copy; 2016 Casey Brant
+        </div>
+
+        <div class="contact">
+          <span class="twitter">
+            <a href="https://twitter.com/basecase">
+              <%= render partial: "svg/twitter_svg", locals: {
+                width: 35,
+                height: 35 } %>
+            </a>
+          </span>
+
+          <span class="email-me">
+            <a href="mailto:casey@caseybrant.com">
+              <%= render partial: "svg/email_svg", locals: {
+                width: 35,
+                height: 35 } %>
+            </a>
+          </span>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
