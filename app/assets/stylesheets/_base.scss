@@ -45,6 +45,10 @@ h1, h2 {
     .contact {
       margin-right: 2rem;
 
+      a {
+        text-decoration: none;
+      }
+
       span {
         margin-left: 1rem;
         position: relative;
