@@ -6,6 +6,7 @@ class HabitsController < ApplicationController
   def create
     @habit = Habit.new(habit_params)
     if @habit.save
+      HabitMailer.confirmation_email(@habit).deliver_later
       redirect_to @habit
     else
       render "new"
