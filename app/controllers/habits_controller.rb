@@ -16,6 +16,18 @@ class HabitsController < ApplicationController
     @habit = Habit.find(params[:id])
   end
 
+  def confirm
+    habit = Habit.find(params[:id])
+    given_token = params[:token]
+
+    if given_token == habit.confirmation_token
+      habit.confirmed = true
+      habit.save
+    end
+
+    redirect_to habit
+  end
+
   private
 
   def habit_params
