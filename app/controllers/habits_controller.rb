@@ -4,9 +4,9 @@ class HabitsController < ApplicationController
   end
 
   def create
-    habit = Habit.new(habit_params)
-    if habit.save
-      redirect_to habit
+    @habit = Habit.new(habit_params)
+    if @habit.save
+      redirect_to @habit
     else
       render "new"
     end

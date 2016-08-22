@@ -4,6 +4,17 @@
   <h2>Start a new daily habit</h2>
   <legend>We'll send you an email every night asking if you've done the habit for the day or not. Then you can see a calendar tracking it.</legend>
 
+  <% if @habit.errors.any? %>
+    <div class="errors">
+      <h3>Whoops!</h3>
+      <ul>
+        <% @habit.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="form-row">
     <label for="habit-name">Habit Name</label>
     <%= f.text_field :habit_name, placeholder: "exercise", required: true %>
