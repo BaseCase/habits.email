@@ -22,6 +22,7 @@ class HabitsController < ApplicationController
 
     if given_token == habit.confirmation_token
       habit.confirmed = true
+      habit.active = true
       habit.save
     end
 
