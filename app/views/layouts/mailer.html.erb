@@ -59,18 +59,18 @@
         text-decoration: none;
       }
 
-      .afterword, footer {
+      .afterword, #footer {
         font-size: 80%;
         line-height: 1.3em;
       }
 
-      footer {
+      #footer {
         border-top: 2px solid #ddd;
         padding-top: 1rem;
         width: 100%;
       }
 
-      footer .email-me {
+      #footer .email-me {
         float: right;
       }
     </style>
@@ -82,7 +82,7 @@
         <%= yield %>
       </div>
 
-      <footer>
+      <div id="footer">
         <span class="created-by">
           &copy; 2016 Casey Brant
         </span>
@@ -92,7 +92,7 @@
             Email me if you have a problem, suggestion, or question!
           </a>
         </span>
-      </footer>
+      </div>
     </div>
   </body>
 </html>
