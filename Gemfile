@@ -9,6 +9,8 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 gem 'redis'
+gem 'premailer-rails'
+gem 'nokogiri'
 
 group :production do
   gem 'sidekiq'
