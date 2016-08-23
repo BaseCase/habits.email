@@ -1,9 +1,14 @@
-Oooooh confirm your habit!
-<br />
-<%= @habit.habit_name %>
-<br />
-<%= @habit.user_name %>
-<br />
-<%= @habit.email %>
-<br />
-Thanks! -the habit.email crew
+<h1>Blep!</h1>
+
+<p>Hi, <%= @habit.user_name %>! Please confirm that you want to start tracking a new habit:</p>
+
+<div class="info">
+  <h2><span class="field-name">Daily Habit:</span><span class="field-value"><%= @habit.habit_name %></span></h2>
+  <h2><span class="field-name">Your Name:</span><span class="field-value"><%= @habit.user_name %></span></h2>
+
+  <%= link_to 'confirm habit', confirm_habit_url(@habit.id, @habit.confirmation_token), id: "confirm-link" %>
+</div>
+
+<div class="afterword">
+  <p>If you didn't start this habit, you can just ignore this email. If you did but you want to change something, <%= link_to 'just go back to the Blep homepage', root_url, id: "homepage-link" %> and start a new one!</p>
+</div>
