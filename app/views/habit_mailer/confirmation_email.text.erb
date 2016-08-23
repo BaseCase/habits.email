@@ -1,8 +1,29 @@
-Text only version!
+Blep!
+=====
 
-Oooooh confirm your habit!
+Hi, <%= @habit.user_name %>! Please confirm that you want to start tracking a new habit:
+
+Daily Habit
+-----------
 <%= @habit.habit_name %>
-<%= @habit.user_name %>
-<%= @habit.email %>
 
-Thanks! -the habit.email crew
+Your Name
+---------
+<%= @habit.user_name %>
+
+---------------------------
+Go here to confirm: <%= confirm_habit_url(@habit.id, @habit.confirmation_token) %>
+---------------------------
+
+
+If you didn't start this habit, you can just ignore this email. If you did but you want to change something, just go back to the Blep homepage and start again: <%= root_url %>
+
+Thanks!
+
+
+
+
+
+------------------------------
+Problem, suggestion, or question? Email me!
+casey@caseybrant.com
