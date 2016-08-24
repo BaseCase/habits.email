@@ -1,1 +1,20 @@
-Here is where we'd see the tracking calendar for <%= @habit.habit_name %> (started by <%= @habit.user_name %> at <%= @habit.email %>).
+<section id="tracking-calendar">
+  <h2><%= @habit.habit_name %></h2>
+  <h3>
+    <span class="user-name"><%= @habit.user_name %></span>
+    wants to do this every day.
+  </h3>
+
+  <% if @habit.entries.empty? %>
+    <p>You haven't logged any days on this habit yet, but they will be tracked here once you do!</p>
+  <% end %>
+
+  <% @habit.entries.order(:for_date).each do |entry| %>
+
+    <div class="calendar-entry <%= entry.successful ? 'success' : 'failure' %>">
+      <div class="month-name"><%= entry.for_date.strftime("%B") %></div>
+      <div class="day-of-month"><%= entry.for_date.day %></div>
+    </div>
+
+  <% end %>
+</section>

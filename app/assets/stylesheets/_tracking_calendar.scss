@@ -1,0 +1,46 @@
+#tracking-calendar {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+  width: 100%;
+
+  h2, h3 {
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+    margin-top: 0;
+
+    .user-name {
+      color: $color-highlight;
+    }
+  }
+
+  .calendar-entry {
+    border: 1px solid #ddd;
+    height: 4rem;
+    width: calc(100% / 7);
+
+    .month-name {
+      font-size: 0.5em;
+      text-align: center;
+      width: 100%;
+    }
+
+    .day-of-month {
+      font-size: 2em;
+      margin-top: 0.2rem;
+      text-align: center;
+      width: 100%;
+    }
+
+    &.success {
+      color: white;
+      font-weight: bold;
+      background: $color-highlight;
+    }
+
+    &.failure {
+      color: #aaa;
+    }
+  }
+}
