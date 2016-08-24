@@ -5,6 +5,8 @@
   margin-top: 2rem;
   width: 100%;
 
+  @media (max-width: $phone-size) { padding: 1rem; }
+
   h2, h3 {
     flex-basis: 100%;
     margin-bottom: 1rem;
@@ -13,6 +15,10 @@
     .user-name {
       color: $color-highlight;
     }
+  }
+
+  p {
+    margin-top: 0;
   }
 
   .calendar-entry {

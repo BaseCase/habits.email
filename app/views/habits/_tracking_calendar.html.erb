@@ -1,12 +1,14 @@
 <section id="tracking-calendar">
   <h2><%= @habit.habit_name %></h2>
-  <h3>
-    <span class="user-name"><%= @habit.user_name %></span>
-    wants to do this every day.
-  </h3>
 
   <% if @habit.entries.empty? %>
-    <p>You haven't logged any days on this habit yet, but they will be tracked here once you do!</p>
+    <h3>Thanks for confirming your habit, <%= @habit.user_name %>!</h3>
+    <p>You'll receive your first email later today, asking if you did the habit today or not. Over time, this page will become a calendar showing you how consistent you've been.</p>
+  <% else %>
+    <h3>
+      <span class="user-name"><%= @habit.user_name %></span>
+      is tracking this daily habit.
+    </h3>
   <% end %>
 
   <% @habit.entries.order(:for_date).each do |entry| %>
