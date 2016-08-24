@@ -5,5 +5,5 @@
 <h2><span class="field-name">Habit:</span><span class="field-value"><%= @entry.habit.habit_name %></span></h2>
 <h2><span class="field-name">Date:</span><span class="field-value"><%= @entry.for_date.strftime("%A, %b %d") %></span></h2>
 
-<%= link_to "Did it! :)", root_url, class: "entry-link success" %>
-<%= link_to "Didn't do it! :(", root_url, class: "entry-link failure" %>
+<%= link_to "Did it! :)", log_success_for_entry_url(@entry.id), class: "entry-link success" %>
+<%= link_to "Didn't do it! :(", log_failure_for_entry_url(@entry.id), class: "entry-link failure" %>
