@@ -17,13 +17,20 @@ h1, h2 {
 }
 
 #page-container {
+  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  min-width: 19rem;
   min-height: 100vh;
+  min-width: 19rem;
   width: 100%;
+
+  em {
+    color: $color-highlight;
+    font-size: 1.1rem;
+    font-style: normal;
+    font-weight: bold;
+  }
 
   header {
     background: $color-hover;
@@ -33,6 +40,8 @@ h1, h2 {
     width: 100%;
 
     em {
+      color: black;
+      font-size: .7rem;
       font-style: normal;
       font-weight: bold;
     }

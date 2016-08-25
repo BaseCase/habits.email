@@ -1,5 +1,5 @@
-<em>Congrats</em>, <%= @habit.user_name %>, you made a habit!
-<br/>
-We sent an email to <%= @habit.email %> for confirmation. Once you click the link in that email, we can start tracking the habit for you.
-<br/>
-Good luck with <%= @habit.habit_name %>!
+<h2>Yay!</h2>
+
+<p>Congrats on starting your new habit, <%= @habit.user_name %>! You’ll get a confirmation email at <em><%= @habit.email %></em> soon.</p>
+
+<p>Once you click the confirmation link there, we’ll begin helping you track <em><%= @habit.habit_name %></em>.</p>
