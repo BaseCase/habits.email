@@ -4,7 +4,7 @@
             url: {action: "create"},
             html: {id: "new-habit-form"} do |f| %>
   <h2>Start a new daily habit</h2>
-  <legend>We'll send you an email every night asking if you've done the habit for the day or not. Then you can see a calendar tracking it.</legend>
+  <legend>You’ll get daily emails asking whether or not you did your habit that day. We’ll use your answers to build up a calendar that tracks your consistency.</legend>
 
   <% if @habit.errors.any? %>
     <div class="errors">
@@ -19,17 +19,17 @@
 
   <div class="form-row">
     <label for="habit-name">Habit Name</label>
-    <%= f.text_field :habit_name, placeholder: "exercise", required: true %>
+    <%= f.text_field :habit_name, placeholder: "Exercise", required: true %>
   </div>
 
   <div class="form-row">
     <label for="habit-email">Email</label>
-    <%= f.email_field :email, placeholder: "stephen@example.com", required: true %>
+    <%= f.email_field :email, placeholder: "casey@example.com", required: true %>
   </div>
 
   <div class="form-row">
     <label for="habit-username">Your Name</label>
-    <%= f.text_field :user_name, placeholder: "Stephen", required: true %>
+    <%= f.text_field :user_name, placeholder: "Casey", required: true %>
   </div>
 
   <div class="form-row">
